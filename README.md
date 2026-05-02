@@ -1,6 +1,12 @@
 # 🏥 NexusHealth - Clinical Management System
 
-A modern, full-featured clinical management system built with Spring Boot 4.0.5 and Java 25. Manage appointments, consultations, doctors, patients, and pharmacist operations efficiently.
+A modern, full-featured clinical management system built with Spring Boot 3.2.0 and Java 21. Manage appointments, consultations, doctors, patients, and pharmacist operations efficiently.
+
+[![Java](https://img.shields.io/badge/Java-21-orange)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-brightgreen)](https://spring.io/projects/spring-boot)
+[![SQLite](https://img.shields.io/badge/SQLite-3-blue)](https://www.sqlite.org/)
+[![Thymeleaf](https://img.shields.io/badge/Thymeleaf-3.1.2-green)](https://www.thymeleaf.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
 
@@ -22,7 +28,7 @@ A modern, full-featured clinical management system built with Spring Boot 4.0.5 
 
 ### ⚙️ Prerequisites
 
-- **Java**: Java 25 (LTS) or higher
+- **Java**: Java 21 (LTS) or higher
 - **Maven**: 3.9.15+ (included as Maven Wrapper)
 - **Git**: For cloning and version control
 - **VSCode** (optional): For IDE-based execution
@@ -35,91 +41,90 @@ A modern, full-featured clinical management system built with Spring Boot 4.0.5 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/ShajahanImdaad53/ZibrijProject.git
-   cd NexusHealth
+   git clone https://github.com/IT24102111/Hospital-Management.git
+   cd Hospital-Management
    ```
 
-2. **Set Java environment** (if needed):
+2. **Run the application**:
    ```bash
-   # Windows PowerShell
-   $env:JAVA_HOME = 'C:\Users\<YourUsername>\.jdk\jdk-25.0.2'
-   
-   # macOS/Linux
-   export JAVA_HOME=/path/to/jdk-25
-   ```
-
-3. **Run the application**:
-   ```bash
-   # Windows
-   .\mvnw spring-boot:run
-   
-   # macOS/Linux
+   # Using Maven Wrapper (recommended)
    ./mvnw spring-boot:run
+   
+   # Or on Windows
+   mvnw.cmd spring-boot:run
    ```
 
-4. **Access the application**:
-   - Open your browser and navigate to: **http://localhost:8081**
-   - Login with admin credentials or create a new account
+3. **Access the application**:
+   Open your browser and go to: `http://localhost:8081`
+
+### Option 2: 🛠️ IDE (VS Code / IntelliJ / Eclipse)
+
+1. **Clone and open** the project in your IDE
+2. **Run** `ClinicApplication.java` as a Spring Boot application
+3. **Access** at `http://localhost:8081`
 
 ---
 
-### Option 2: 🔵 VSCode (Recommended for Development)
+## 🖥️ Live Demo
 
-#### Setup
+🚀 **Live Demo**: [http://localhost:8081](http://localhost:8081) (after running locally)
 
-1. **Open VSCode**:
-   - Open the `NexusHealth` project folder in VSCode
+---
 
-2. **Install Extensions** (if not already installed):
-   - Extension Pack for Java (Microsoft)
-   - Spring Boot Extension Pack
-   - Maven for Java (Microsoft)
+## 🛠️ Technologies Used
 
-3. **Configure Java Home** (if needed):
-   - Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS)
-   - Type: `Java: Configure Java Runtime`
-   - Select or point to Java 25 installation
+- **Backend**: Java 21, Spring Boot 3.2.0
+- **Frontend**: Thymeleaf, HTML5, CSS3, JavaScript
+- **Database**: SQLite
+- **Build Tool**: Maven
+- **Security**: Spring Security
+- **ORM**: Hibernate/JPA
 
-#### Running from VSCode
+---
 
-**Method 1: Using Run Configuration (Easiest)**
+## 📁 Project Structure
 
-1. Open the terminal in VSCode: `Ctrl+` (backtick)
-2. Run the command:
-   ```bash
-   .\mvnw spring-boot:run
-   ```
-3. Wait for "Started ClinicApplication" message
+```
+src/
+├── main/
+│   ├── java/com/NexusHelth/
+│   │   ├── ClinicApplication.java
+│   │   ├── config/
+│   │   ├── controller/
+│   │   ├── dto/
+│   │   ├── model/
+│   │   ├── service/
+│   │   └── util/
+│   └── resources/
+│       ├── application.properties
+│       ├── schema.sql
+│       ├── static/
+│       └── templates/
+└── test/
+    └── java/com/NexusHelth/
+```
 
-**Method 2: Using Maven Explorer (GUI)**
+---
 
-1. Click the Maven icon in the VSCode sidebar (looks like 🔄)
-2. Expand `Clinic` → `Plugins` → `spring-boot`
-3. Right-click `spring-boot:run` → **Run**
+## 🤝 Contributing
 
-**Method 3: Using Debug Configuration**
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-1. Go to **Run and Debug** (Ctrl+Shift+D)
-2. Create a new launch configuration:
-   ```json
-   {
-       "name": "Spring Boot Debug",
-       "type": "java",
-       "name": "Spring Boot App",
-       "request": "launch",
-       "mainClass": "com.NexusHelth.ClinicApplication",
-       "preLaunchTask": "maven: clean",
-       "args": ""
-   }
-   ```
-3. Click **Run** (▶️)
+---
 
-#### VSCode Tips
+## 📄 License
 
-- 💡 **Hot Reload**: Use Spring Boot DevTools for automatic restart on file changes
-- 🐛 **Debugging**: Set breakpoints by clicking line numbers, then run in debug mode (F5)
-- 📝 **Terminal**: Use the integrated terminal (Ctrl+`) to run Maven commands
-- 🔍 **Code Navigation**: Ctrl+Click on class names to jump to definitions
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📞 Contact
+
+For questions or support, please open an issue on GitHub.
 - 🧹 **Format Code**: Right-click → Format Document (Alt+Shift+F)
 
 ---
